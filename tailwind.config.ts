@@ -11,9 +11,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
-        headline: ['Belleza', 'sans-serif'],
-        code: ['monospace', 'monospace'], // Added a fallback for code
+        body: ['Poppins', 'sans-serif'], // Updated to Poppins
+        headline: ['Poppins', 'sans-serif'], // Updated to Poppins, or remove if not needed
+        code: ['monospace', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

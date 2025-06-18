@@ -133,6 +133,12 @@ export default function KubetLandingPage() {
           100% { transform: translateY(-10vh) scale(1); opacity: 0; }
         }
 
+        /* Keyframes untuk animasi huruf K dan U */
+        @keyframes bobLetter {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-4px); }
+        }
+
         /* ------------------- */
         /* Logo KUBET          */
         /* ------------------- */
@@ -142,8 +148,17 @@ export default function KubetLandingPage() {
           letter-spacing: -2px;
           margin-bottom: 1rem;
         }
-        .logo .k { color: var(--color-primary-blue); }
-        .logo .u { color: var(--color-secondary-yellow); }
+        .logo .k {
+          color: var(--color-primary-blue);
+          display: inline-block; /* Penting untuk animasi transform */
+          animation: bobLetter 1.8s ease-in-out infinite;
+        }
+        .logo .u {
+          color: var(--color-secondary-yellow);
+          display: inline-block; /* Penting untuk animasi transform */
+          animation: bobLetter 1.8s ease-in-out infinite;
+          animation-delay: 0.25s; /* Sedikit delay agar tidak serempak */
+        }
         .logo .bet {
           color: var(--color-text-light);
           text-shadow: 

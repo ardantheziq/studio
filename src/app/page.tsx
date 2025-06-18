@@ -59,13 +59,22 @@ export default function KubetLandingPage() {
           100% { background-position: 0% 50%; }
         }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .logo-container { padding: 20px 0; text-align: center; }
-        .logo { /* font-family is set by .font-headline class */ font-size: 3rem; font-weight: bold; line-height: 1; }
+        .logo-container { padding: 20px 0 10px; text-align: center; } /* Adjusted bottom padding */
+        .logo { /* font-family is set by .font-headline class */ font-size: 3rem; line-height: 1; } /* Removed font-weight: bold; */
         .logo .k-letter { color: hsl(var(--accent)); }
         .logo .u-letter { color: hsl(var(--primary)); }
         .logo .bet-letters {
           color: hsl(var(--foreground));
-          text-shadow: -1px -1px 0 hsl(var(--accent)), 1px -1px 0 hsl(var(--accent)), -1px 1px 0 hsl(var(--accent)), 1px 1px 0 hsl(var(--accent)), -1.5px 0 0 hsl(var(--accent)), 1.5px 0 0 hsl(var(--accent)), 0 -1.5px 0 hsl(var(--accent)), 0 1.5px 0 hsl(var(--accent));
+          /* Refined text-shadow for a cleaner outline */
+          text-shadow: 
+            -1px -1px 0 hsl(var(--accent)),  
+             1px -1px 0 hsl(var(--accent)),
+            -1px  1px 0 hsl(var(--accent)),
+             1px  1px 0 hsl(var(--accent)),
+            -1px  0   0 hsl(var(--accent)),
+             1px  0   0 hsl(var(--accent)),
+             0   -1px 0 hsl(var(--accent)),
+             0    1px 0 hsl(var(--accent));
         }
         .hero-section { padding: 40px 20px; text-align: center; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .hero-section h1 { /* font-family by .font-headline */ font-size: 2.5rem; margin-bottom: 20px; color: hsl(var(--foreground)); max-width: 700px; line-height: 1.2; }

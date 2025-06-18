@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" amp=""> {/* Added amp attribute for AMP pages and lang="id" */}
+    <html lang="id" amp="">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
@@ -38,7 +38,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet" />
       </head>
-      {/* Apply font-body from Tailwind config to the body */}
       <body className="font-body antialiased bg-background text-foreground">
         {children}
       </body>
